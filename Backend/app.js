@@ -7,7 +7,7 @@ const swaggerUi = require('swagger-ui-express')
 const yaml = require('yamljs')
 const swaggerDocs = yaml.load('swagger.yaml')
 const app = express()
-app.use(cors({origin: 'http://127.0.0.1:5500'}))
+app.use(cors({origin: '*'}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
